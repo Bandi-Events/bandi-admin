@@ -28,12 +28,13 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "prepare": "husky install",
+    "start": "craco start",
+    "test": "CI=true craco test"
   },
   "eslintConfig": {
     "extends": [
@@ -77,18 +78,12 @@
     "eslint-plugin-prettier": "3.4.1",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "husky": "7.0.2",
+    "husky": "^7.0.0",
     "postcss": "^7",
     "prettier": "2.3.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.4.4",
     "web-vitals": "^1.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn pre-commit",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "config": {
     "commitizen": {
