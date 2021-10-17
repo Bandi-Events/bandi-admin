@@ -53,7 +53,7 @@ export default function Sidebar() {
                 },
                 {
                   label: 'Log Out',
-                  link: '/logout',
+                  link: '/sign-in',
                 },
               ]}
             />
