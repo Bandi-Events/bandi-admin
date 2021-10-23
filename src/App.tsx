@@ -4,6 +4,7 @@ import Sidebar from 'components/Sidebar';
 import Footer from 'components/Footer';
 import Dashboard from 'pages/Dashboard';
 import Login from 'pages/Login';
+import Registration from 'pages/Registration';
 import Users from 'pages/Users';
 
 const App: React.FC = () => {
@@ -16,6 +17,7 @@ const App: React.FC = () => {
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/users" exact component={Users} />
             <Route path="/sign-in" exact component={Login} />
+            <Route path="/register" exact component={Registration} />
             <Redirect from="/" to="/dashboard" />
           </Switch>
           <Footer />
