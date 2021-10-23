@@ -1,6 +1,7 @@
 import CardLineChart from 'components/CardLineChart';
 import CardBarChart from 'components/CardBarChart';
 import CardPageVisits from 'components/CardPageVisits';
+import CardSocialTraffic from 'components/CardSocialTraffic';
 import CardStats from 'components/CardStats';
 
 const Dashboard: React.FC = () => {

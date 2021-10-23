@@ -1,7 +1,9 @@
+import { Card } from 'components/Card';
+
 const CardSocialTraffic: React.FC = () => {
   return (
     <>
-      <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+      <Card>
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full px-4 max-w-full flex-grow flex-1">
@@ -140,7 +142,7 @@ const CardSocialTraffic: React.FC = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </Card>
     </>
   );
 };
