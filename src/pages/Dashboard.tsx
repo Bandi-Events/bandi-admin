@@ -1,3 +1,4 @@
+import CardLineChart from 'components/CardLineChart';
 import CardBarChart from 'components/CardBarChart';
 import CardStats from 'components/CardStats';
 
