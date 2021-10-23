@@ -1,3 +1,4 @@
+import CardBarChart from 'components/CardBarChart';
 import CardStats from 'components/CardStats';
 
 const Dashboard: React.FC = () => {
