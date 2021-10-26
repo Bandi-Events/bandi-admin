@@ -2,6 +2,7 @@
 // @ts-nocheck
 import { useEffect, useRef, useState } from 'react';
 import { Chart, CategoryScale, LinearScale, LineController, PointElement, LineElement } from 'chart.js';
+import { Card, CardBody, CardHeader } from 'components/Card';
 
 Chart.register(CategoryScale, LinearScale, LineController, PointElement, LineElement);
 
@@ -122,21 +123,16 @@ const CardLineChart: React.FC = () => {
 
   return (
     <>
-      <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-blueGray-700">
-        <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
-          <div className="flex flex-wrap items-center">
-            <div className="relative w-full max-w-full flex-grow flex-1">
-              <h6 className="uppercase text-blueGray-100 mb-1 text-xs font-semibold">Overview</h6>
-              <h2 className="text-xl font-semibold">Sales value</h2>
+      <Card>
+        <CardBody>
+          <CardHeader title="Sales value" subtitle="Overview" />
+          <div className="p-4 flex-auto">
+            <div className="relative h-350-px">
+              {isRebuildingCanvas ? undefined : <canvas ref={chartCanvasRef} id="line-chart" />}
             </div>
           </div>
-        </div>
-        <div className="p-4 flex-auto">
-          <div className="relative h-350-px">
-            {isRebuildingCanvas ? undefined : <canvas ref={chartCanvasRef} id="line-chart" />}
-          </div>
-        </div>
-      </div>
+        </CardBody>
+      </Card>
     </>
   );
 };
