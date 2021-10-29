@@ -1,4 +1,6 @@
 import { Card } from 'components/Card';
+import { Table, TableHead, TableHeadCell, TableDataCell } from 'components/Table';
+import { Progress } from './Progress';
 
 const CardSocialTraffic: React.FC = () => {
   return (
@@ -21,126 +23,52 @@ const CardSocialTraffic: React.FC = () => {
         </div>
         <div className="block w-full overflow-x-auto">
           {/* Projects table */}
-          <table className="items-center w-full bg-transparent border-collapse">
-            <thead className="thead-light">
+          <Table>
+            <TableHead>
               <tr>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Referral
-                </th>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Visitors
-                </th>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left min-w-140-px"></th>
+                <TableHeadCell>Referral</TableHeadCell>
+                <TableHeadCell>Visitors</TableHeadCell>
+                <TableHeadCell></TableHeadCell>
               </tr>
-            </thead>
+            </TableHead>
             <tbody>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  Facebook
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  1,480
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">60%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                        <div
-                          style={{ width: '60%' }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
+                <TableDataCell className="text-left font-bold">Facebook</TableDataCell>
+                <TableDataCell>1,480</TableDataCell>
+                <TableDataCell>
+                  <Progress value={60} colour="red" />
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  Facebook
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  5,480
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">70%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-emerald-200">
-                        <div
-                          style={{ width: '70%' }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
+                <TableDataCell className="font-bold text-left">Facebook</TableDataCell>
+                <TableDataCell>5,480</TableDataCell>
+                <TableDataCell>
+                  <Progress value={70} colour="green" />
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  Google
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  4,807
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">80%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
-                        <div
-                          style={{ width: '80%' }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
+                <TableDataCell className="text-left font-bold">Google</TableDataCell>
+                <TableDataCell>4,807</TableDataCell>
+                <TableDataCell>
+                  <Progress value={80} colour="purple" />
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  Instagram
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  3,678
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">75%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-lightBlue-200">
-                        <div
-                          style={{ width: '75%' }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-lightBlue-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
+                <TableDataCell className="font-bold text-left">Instagram</TableDataCell>
+                <TableDataCell>3,678</TableDataCell>
+                <TableDataCell>
+                  <Progress value={75} colour="blue" />
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  twitter
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  2,645
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">30%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-orange-200">
-                        <div
-                          style={{ width: '30%' }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
+                <TableDataCell className="font-bold text-left">twitter</TableDataCell>
+                <TableDataCell>2,645</TableDataCell>
+                <TableDataCell>
+                  <Progress value={30} colour="yellow" />
+                </TableDataCell>
               </tr>
             </tbody>
-          </table>
+          </Table>
         </div>
       </Card>
     </>
