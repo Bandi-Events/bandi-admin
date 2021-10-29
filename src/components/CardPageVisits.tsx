@@ -1,4 +1,5 @@
 import { Card } from 'components/Card';
+import { Table, TableHead, TableHeadCell, TableDataCell } from 'components/Table';
 
 const CardPageVisits: React.FC = () => {
   return (
@@ -20,101 +21,63 @@ const CardPageVisits: React.FC = () => {
           </div>
         </div>
         <div className="block w-full overflow-x-auto">
-          <table className="items-center w-full bg-transparent border-collapse">
-            <thead>
+          <Table>
+            <TableHead>
               <tr>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Page name
-                </th>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Visitors
-                </th>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Unique users
-                </th>
-                <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                  Bounce rate
-                </th>
+                <TableHeadCell>Page name</TableHeadCell>
+                <TableHeadCell>Visitors</TableHeadCell>
+                <TableHeadCell>Unique users</TableHeadCell>
+                <TableHeadCell>Bounce rate</TableHeadCell>
               </tr>
-            </thead>
+            </TableHead>
             <tbody>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  4,569
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  340
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <TableDataCell className="font-bold text-left">/argon/</TableDataCell>
+                <TableDataCell>4,569</TableDataCell>
+                <TableDataCell>340</TableDataCell>
+                <TableDataCell>
                   <i className="fas fa-arrow-up text-emerald-500 mr-4" />
                   46,53%
-                </td>
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/index.html
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  3,985
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  319
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <TableDataCell className="font-bold text-left">/argon/index.html</TableDataCell>
+                <TableDataCell>3,985</TableDataCell>
+                <TableDataCell>319</TableDataCell>
+                <TableDataCell>
                   <i className="fas fa-arrow-down text-orange-500 mr-4" />
                   46,53%
-                </td>
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/charts.html
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  3,513
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  294
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <TableDataCell className="font-bold text-left">/argon/charts.html</TableDataCell>
+                <TableDataCell>3,513</TableDataCell>
+                <TableDataCell>294</TableDataCell>
+                <TableDataCell>
                   <i className="fas fa-arrow-down text-orange-500 mr-4" />
                   36,49%
-                </td>
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/tables.html
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  2,050
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  147
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <TableDataCell className="font-bold text-left">/argon/tables.html</TableDataCell>
+                <TableDataCell>2,050</TableDataCell>
+                <TableDataCell>147</TableDataCell>
+                <TableDataCell>
                   <i className="fas fa-arrow-up text-emerald-500 mr-4" />
                   50,87%
-                </td>
+                </TableDataCell>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  /argon/profile.html
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  1,795
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                  190
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <TableDataCell className="font-bold text-left">/argon/profile.html</TableDataCell>
+                <TableDataCell>1,795</TableDataCell>
+                <TableDataCell>190</TableDataCell>
+                <TableDataCell>
                   <i className="fas fa-arrow-down text-red-500 mr-4" />
                   46,53%
-                </td>
+                </TableDataCell>
               </tr>
             </tbody>
-          </table>
+          </Table>
         </div>
       </Card>
     </>
